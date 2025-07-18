@@ -40,16 +40,35 @@ $(document).ready(function () {
   }
 });
 
+const openBtn = document.getElementById("openBtn");
+const resetBtn = document.getElementById("resetBtn");
+const envelope = document.getElementById("envelope");
 const audio = document.getElementById("sound");
-let isPlaying = false;
+
+let hasPlayed = false;
+
 function playAudioOnce() {
-    if (!isPlaying) {
-        audio.play().catch((e) => {
-            console.log("Autoplay blocked:", e);
+    if (!hasPlayed) {
+        audio.play().then(() => {
+            hasPlayed = true;
+        }).catch((e) => {
+            console.log("Không thể phát nhạc:", e);
         });
-        isPlaying = true;
     }
 }
-window.addEventListener("click", playAudioOnce);
-window.addEventListener("touchstart", playAudioOnce);
-window.addEventListener("keydown", playAudioOnce);
+
+openBtn.addEventListener("click", function () {
+    envelope.classList.remove("close");
+    envelope.classList.add("open");
+    openBtn.style.display = "none";
+    resetBtn.style.display = "inline-block";
+    playAudioOnce();
+});
+
+resetBtn.addEventListener("click", function () {
+    envelope.classList.remove("open");
+    envelope.classList.add("close");
+    openBtn.style.display = "inline-block";
+    resetBtn.style.display = "none";
+    playAudioOnce();
+});
