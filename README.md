@@ -7,4 +7,5 @@ Tham khảo: [Src Code gốc](https://github.com/heryyy/pink-envelope)
 > Video Demo: [Xem tại đây](https://www.tiktok.com/@dr.gifter306/video/7527984331982114055) 
 
 ---
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/2d97a76e-c66e-40b4-9911-160cd0b2ace5" />
+
+![Làm Gif (3)](https://github.com/user-attachments/assets/053a0a32-6dce-43a6-a613-04ed846c0b7d)
